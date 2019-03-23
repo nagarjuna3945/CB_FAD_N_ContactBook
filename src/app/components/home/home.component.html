@@ -1,0 +1,12 @@
+
+<section id="banner" data-video="images/banner">
+  <div class="inner">
+    <header>
+      <h1>Contact Book</h1>
+      <p>It is simply a dummy text for show casing you can change it as what you want.</p>
+    </header>
+    <button *ngIf="!(user | async)?.uid" class="btn btn-danger" (click)="login()"><i class="fa fa-google-plus icon" aria-hidden="true"></i><span class="sign">Sign In with google</span></button>
+    <a *ngIf="(user | async)?.uid" routerLink="listings" class="btn btn-success">Listings <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+  </div>
+</section>
+
